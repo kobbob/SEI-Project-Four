@@ -13,3 +13,5 @@ class Building(models.Model):
     source_info: models.CharField(max_length=100, default=None)
     source_url: models.URLField(default=None)
 
+    def __str__(self):
+      return f"{self.building_name} - {self.building_location}"
