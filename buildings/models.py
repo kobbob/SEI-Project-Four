@@ -9,7 +9,7 @@ class Building(models.Model):
     description: models.CharField(max_length=500, default=None)
     image_caption: models.CharField(max_length=50, default=None)
     image_source: models.CharField(max_length=50, default=None)
-    image_url: models.CharField(max_length=300, default=None)
+    image_url: models.URLField(default=None)
     source_info: models.CharField(max_length=100, default=None)
-    source_url: models.CharField(max_length=300, default=None)
+    source_url: models.URLField(default=None)
 

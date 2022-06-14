@@ -15,6 +15,16 @@ class Migration(migrations.Migration):
             name='Building',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('building_name', models.CharField(max_length=100, default=None)),
+                ('building_location', models.CharField(max_length=100, default=None)),
+                ('date_built', models.PositiveIntegerField(default=None)),
+                ('architect', models.CharField(max_length=100, default=None)),
+                ('description', models.CharField(max_length=500, default=None)),
+                ('image_caption', models.CharField(max_length=50, default=None)),
+                ('image_source', models.CharField(max_length=50, default=None)),
+                ('image_url', models.URLField(default=None)),
+                ('source_info', models.CharField(max_length=100, default=None)),
+                ('source_url', models.URLField(default=None)),
             ],
         ),
     ]
