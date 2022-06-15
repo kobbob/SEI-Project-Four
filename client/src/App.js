@@ -5,8 +5,8 @@ import axios from 'axios'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Import Components
-import About from './components/About'
-import Content from './components/Content'
+import About from './components/sidebar/About'
+import Content from './components/masonry/Content'
 
 const App = () => {
 
@@ -18,16 +18,19 @@ const App = () => {
     getData()
   })
 
+
   return (
-    <main className='site-container'>
-      <BrowserRouter>
-        <About>
-          <Routes>
-            <Route path='/' element={<Content />} />
-          </Routes>
-        </About>
-      </BrowserRouter>
-    </main>
+    <div id='site-container'>
+      <div id='container-wrap'>
+        <BrowserRouter>
+          <About>
+            <Routes>
+              <Route path='/' element={<Content />} />
+            </Routes>
+          </About>
+        </BrowserRouter>
+      </div>
+    </div>
   )
 }
 
