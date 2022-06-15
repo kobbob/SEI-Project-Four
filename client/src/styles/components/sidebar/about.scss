@@ -2,7 +2,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  padding: 40px;
+  padding: 0 20px 0 20px;
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
@@ -16,15 +16,9 @@ h1 {
 }
 
 h1.title {
-  margin-top: 20vh;
+  margin-top: 30vh;
   margin-bottom: 3vh;
   font-size: 300%;
-}
-
-
-
-h2 {
-  font-family: $sub-heading-font
 }
 
 p,
@@ -38,31 +32,53 @@ span {
   ;
 }
 
+ul,
+li,
 a {
   color: #141414;
   text-decoration: none !important;
-  background: yellow;
+  list-style: none;
+  display: inline;
+  padding-right: 10px;
+  position: relative;
+  ::before {
+    background-color: rgb(217, 241, 245);
+
+    content: "";
+    position: absolute;
+    width: calc(100% + 1px);
+    height: 60%;
+    left: -3px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
 }
 
+
 // Sections:
-// section {}
-// #hero {}
-// container {}
-// title {}
 
 section {
   text-align: left;
+
   h2 {
-    font-size: 28px;
+    font-size: 22px;
+    font-family: $sub-heading-font;
+    margin-top: 30px;
   }
+
+  p {
+    font-size: 13px;
+  }
+
   .container {
-    padding-bottom: 120px;
+    padding-bottom: 10px;
     position: relative;
-    border-bottom: 2px solid #c99124;
   }
+
   &:last-of-type {
     .container {
-      border-bottom: 0;
+      padding-bottom: 50px;
     }
   }
 }
@@ -76,23 +92,38 @@ section {
   position: relative;
 }
 
-// #gallery {
-//   .image {
-//     background-position: center;
-//     background-size: cover;
-//     &:after {
-//       content: '';
-//       padding-bottom: 100%;
-//       display: block;
-//     }
-//     &.image-one {
-//       background-image: url('./assets/image-one.jpg');
-//     }
-//     &.image-two {
-//       background-image: url('./assets/image-two.jpg');
-//     }
-//     &.image-three {
-//       background-image: url('./assets/image-three.jpg');
-//     }
-//   }
-// }
+#gallery {
+  .image {
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+
+    &:after {
+      content: '';
+      padding-bottom: 100%;
+
+    }
+
+    &.image-one {
+      background-image: url('/assets/image-one.jpg');
+    }
+
+    &.image-two {
+      background-image: url('/assets/image-two.jpg');
+    }
+
+    &.image-three {
+      background-image: url('/assets/image-three.jpg');
+    }
+  }
+}
+
+#waste-age {
+  p {
+    padding-top: 20px;
+  }
+
+}
