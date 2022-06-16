@@ -69,9 +69,9 @@ const About = () => {
 
       <section className="section" id="nav">
         <ul className="container" id="about">
-          <li><Link to='/'>Gallery</Link></li>
-          <li><Link to='/signin'>Sign In</Link></li>
-          <li><Link to='/profile'>Profile</Link></li>
+          <li className="nav-list"><Link to='/'>Gallery</Link></li>
+          <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
+          <li className="nav-list"><Link to='/profile'>Profile</Link></li>
         </ul>
       </section>
 

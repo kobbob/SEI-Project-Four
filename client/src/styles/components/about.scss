@@ -16,7 +16,7 @@ h1.title {
 }
 
 h1.title {
-  margin-top: 30vh;
+  margin-top: 8vh;
   margin-bottom: 3vh;
   font-size: 300%;
 }
@@ -32,8 +32,8 @@ span {
   ;
 }
 
-ul,
-li,
+// List / nav: 
+li.nav-list,
 a {
   color: #141414;
   text-decoration: none !important;
@@ -55,7 +55,6 @@ a {
     transform: rotate(-2deg);
   }
 }
-
 
 
 // Sections:
@@ -92,16 +91,20 @@ section {
   background-position: center;
   background-size: cover;
   position: relative;
+  border: 1px solid black
 }
 
 #gallery {
+  height: 100px;
+  margin-left: 20px;
   .image {
     background-position: center;
     background-size: cover;
     height: 100px;
     float: left;
-    width: 33.33%;
-    padding: 15px;
+    width: 125px;
+    margin: 5px;
+    border: 1px solid black;
 
     &:after {
       content: '';

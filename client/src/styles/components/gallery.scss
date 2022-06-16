@@ -2,3 +2,16 @@ h1.content-title {
   font-family: $title-font;
   text-align: center
 }
+
+.masonry-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+img {
+  border-radius: 8px;
+}
+
+

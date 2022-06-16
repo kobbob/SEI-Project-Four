@@ -1,5 +1,5 @@
 nav-container {
-  padding: 30px 50px;
+  // padding: 30px 50px;
   align-items: center;
   justify-content: space-between;
   display: flex;
@@ -11,4 +11,6 @@ h1.nav-title {
   font-family: $title-font;
   text-align: end;
   font-size: 40px;
+  margin-bottom: 20px;
+  margin-right: 10px
 }
