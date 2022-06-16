@@ -1,6 +1,22 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
+
+// Import helpers
+import { userIsAuthenticated } from '../helpers/auth'
+
 
 const About = () => {
+
+  // Navigate
+  const navigate = useNavigate()
+
+  // ? This function removes the token and navigates to the login page
+  const handleLogout = () => {
+    // Remove the token from local storage
+    window.localStorage.removeItem('architecture-waste-age')
+    // Navigate to the gallery page
+    navigate('/gallery')
+  }
 
   return (
     <div id="about-sidebar">
@@ -70,8 +86,16 @@ const About = () => {
       <section className="section" id="nav">
         <ul className="container" id="about">
           <li className="nav-list"><Link to='/'>Gallery</Link></li>
-          <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
-          <li className="nav-list"><Link to='/profile'>Profile</Link></li>
+          {userIsAuthenticated() ?
+            <>
+              <li className="nav-list"><Link to='/profile'>Profile</Link></li>
+              <li className="nav-list"><Link onClick={handleLogout}>Sign Out</Link></li>
+            </>
+            :
+            <>
+              <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
+            </>
+          }
         </ul>
       </section>
 

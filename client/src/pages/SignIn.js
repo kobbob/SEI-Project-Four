@@ -17,7 +17,9 @@ import { green, purple } from '@mui/material/colors'
 
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
+// Material UI Theme
 const theme = createTheme({
   palette: {
     primary: {
@@ -30,15 +32,47 @@ const theme = createTheme({
 })
 
 const SignIn = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    const data = new FormData(event.currentTarget)
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    })
+
+  // Navigate
+  const navigate = useNavigate()
+
+  // ? State
+  // Form data passed by user
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  })
+
+  const [errors, setErrors] = useState(false)
+
+  // ? Save to local storage
+  const setTokenToLocalStorage = (token) => {
+    window.localStorage.setItem('architecture-waste-age', token)
   }
 
+  // Submit request
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    try {
+      const { data } = await axios.post('/api/auth/login/', formData)
+      setTokenToLocalStorage(data.token)
+      navigate('/profile')
+    } catch (err) {
+      console.log(err)
+      setErrors(true)
+    }
+    // const data = new FormData(event.currentTarget)
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('password'),
+    // })
+  }
+
+  //  Handle change
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setErrors(false)
+  }
 
 
   return (
@@ -60,7 +94,7 @@ const SignIn = () => {
             Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
+            <TextField value={formData.email} onChange={handleChange}
               margin="normal"
               required
               fullWidth
@@ -70,7 +104,7 @@ const SignIn = () => {
               autoComplete="email"
               autoFocus
             />
-            <TextField
+            <TextField value={formData.password} onChange={handleChange}
               margin="normal"
               required
               fullWidth
@@ -91,13 +125,13 @@ const SignIn = () => {
               sx={{ mt: 3, mb: 2 }}
             >
               <Link href="/profile" color="inherit">
-              Sign In
+                Sign In
               </Link>
             </Button>
             <Grid container justifyContent="center">
               <Grid item>
                 <Link href="/signup" variant="body2">
-                  {'No account? Sign up here'}
+                  {'No account? Click here to sign up'}
                 </Link>
               </Grid>
             </Grid>

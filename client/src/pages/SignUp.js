@@ -16,7 +16,9 @@ import { green, purple } from '@mui/material/colors'
 
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
+// Material UI Theme
 const theme = createTheme({
   palette: {
     primary: {
@@ -28,7 +30,11 @@ const theme = createTheme({
   },
 })
 
+
 const SignUp = () => {
+
+  // Navigate
+  const navigate = useNavigate()
 
   // State - form data passed by user
   const [formData, setFormData] = useState({
@@ -56,7 +62,7 @@ const SignUp = () => {
     try {
       console.log(formData)
       await axios.post('/api/auth/register/', formData)
-
+      navigate('/profile')
     } catch (err) {
       console.log(err) // Full error object
       console.log(err.response) // This is the response from the API including status etc
@@ -112,7 +118,7 @@ const SignUp = () => {
                   autoComplete="family-name"
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField value={formData.username} onChange={handleChange}
                   autoComplete="username"
                   name="username"
@@ -122,6 +128,7 @@ const SignUp = () => {
                   label="Username"
                   autoFocus
                 />
+                {/* {errors.username && <p>{errors.username}</p>} */}
               </Grid>
               <Grid item xs={12}>
                 <TextField value={formData.email} onChange={handleChange}
