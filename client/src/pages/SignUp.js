@@ -3,7 +3,6 @@ import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline'
 import TextField from '@mui/material/TextField'
-import FormControlLabel from '@mui/material/FormControlLabel'
 import Link from '@mui/material/Link'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
@@ -94,8 +93,11 @@ const SignUp = () => {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
+
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          
             <Grid container spacing={2}>
+
               <Grid item xs={12} sm={6}>
                 <TextField value={formData.first_name} onChange={handleChange}
                   autoComplete="given-name"
@@ -107,6 +109,7 @@ const SignUp = () => {
                   autoFocus
                 />
               </Grid>
+
               <Grid item xs={12} sm={6}>
                 <TextField value={formData.last_name} onChange={handleChange}
                   required
@@ -117,6 +120,7 @@ const SignUp = () => {
                   autoComplete="family-name"
                 />
               </Grid>
+
               <Grid item xs={12}>
                 <TextField value={formData.username} onChange={handleChange}
                   autoComplete="username"
@@ -128,7 +132,9 @@ const SignUp = () => {
                   autoFocus
                 />
                 {/* {errors.username && <p>{errors.username}</p>} */}
+                {/* for errors: https://mui.com/material-ui/react-text-field/ */}
               </Grid>
+
               <Grid item xs={12}>
                 <TextField value={formData.email} onChange={handleChange}
                   required
@@ -139,6 +145,7 @@ const SignUp = () => {
                   autoComplete="email"
                 />
               </Grid>
+
               <Grid item xs={12}>
                 <TextField value={formData.password} onChange={handleChange}
                   required
@@ -150,6 +157,7 @@ const SignUp = () => {
                   autoComplete="new-password"
                 />
               </Grid>
+
               <Grid item xs={12}>
                 <TextField value={formData.password_confirmation} onChange={handleChange}
                   required
@@ -162,6 +170,7 @@ const SignUp = () => {
                 />
               </Grid>
             </Grid>
+
             <Button
               type="submit"
               fullWidth
@@ -170,6 +179,7 @@ const SignUp = () => {
             >
                 Sign Up
             </Button>
+            
             <Grid container justifyContent="center">
               <Grid item>
                 <Link href="/signin" variant="body2">

@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 
 // Import helpers
-import { userIsAuthenticated } from '../helpers/auth'
+// import { userIsAuthenticated } from '../helpers/auth'
 
 
 const About = () => {
@@ -86,16 +86,16 @@ const About = () => {
       <section className="section" id="nav">
         <ul className="container" id="about">
           <li className="nav-list"><Link to='/'>Gallery</Link></li>
-          {userIsAuthenticated() ?
-            <>
-              <li className="nav-list"><Link to='/profile'>Profile</Link></li>
-              <li className="nav-list"><Link onClick={handleLogout}>Sign Out</Link></li>
+          {/* {userIsAuthenticated() ?
+            <> */}
+          <li className="nav-list"><Link to='/profile'>Profile</Link></li>
+          {/* <li className="nav-list"><Link onClick={handleLogout}>Sign Out</Link></li>
             </>
             :
-            <>
-              <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
-            </>
-          }
+            <> */}
+          <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
+          {/* </>
+          } */}
         </ul>
       </section>
 
