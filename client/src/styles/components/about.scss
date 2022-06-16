@@ -11,7 +11,7 @@
 }
 
 // Typography: 
-h1 {
+h1.title {
   font-family: $title-font
 }
 
@@ -40,6 +40,7 @@ a {
   list-style: none;
   display: inline;
   padding-right: 10px;
+  margin: 10px;
   position: relative;
   ::before {
     background-color: rgb(217, 241, 245);
@@ -54,6 +55,7 @@ a {
     transform: rotate(-2deg);
   }
 }
+
 
 
 // Sections:

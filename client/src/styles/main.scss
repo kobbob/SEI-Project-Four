@@ -1,4 +1,6 @@
 @import './variables';
 @import './base';
-@import './components/sidebar/about';
-@import './components/content';
+@import './components/about';
+@import './components/nav';
+@import './components/gallery';
+@import './components/content-container.scss'

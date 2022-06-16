@@ -5,8 +5,11 @@ import axios from 'axios'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Import Components
-import About from './components/sidebar/About'
-import Content from './components/masonry/Content'
+import About from './components/common/About'
+import Nav from './components/common/Nav'
+import Gallery from './pages/Gallery'
+import SignIn from './pages/SignIn'
+import Profile from './pages/Profile'
 
 const App = () => {
 
@@ -20,14 +23,22 @@ const App = () => {
 
 
   return (
-    <div id='site-container'>
+    <div id='flex-container'>
       <div id='container-wrap'>
         <BrowserRouter>
-          <About>
+          <div id='sidebar'>
+            <About />
+          </div>
+          <div id='navbar'>
+            <Nav />
+          </div>
+          <div id='content-container'>
             <Routes>
-              <Route path='/' element={<Content />} />
+              <Route path='/' element={<Gallery />} />
+              <Route path='/signin' element={<SignIn />} />
+              <Route path='/profile' element={<Profile />} />
             </Routes>
-          </About>
+          </div>
         </BrowserRouter>
       </div>
     </div>
