@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-import axios from 'axios'
 
 // Import react-router-dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -9,17 +7,10 @@ import About from './components/common/About'
 import Nav from './components/common/Nav'
 import Gallery from './pages/Gallery'
 import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
 import Profile from './pages/Profile'
 
 const App = () => {
-
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/buildings/') // * <-- replace with your endpoint
-      console.log(data)
-    }
-    getData()
-  })
 
 
   return (
@@ -36,6 +27,7 @@ const App = () => {
             <Routes>
               <Route path='/' element={<Gallery />} />
               <Route path='/signin' element={<SignIn />} />
+              <Route path='/signup' element={<SignUp />} />
               <Route path='/profile' element={<Profile />} />
             </Routes>
           </div>
