@@ -38,7 +38,8 @@ a {
   color: #141414;
   text-decoration: none !important;
   list-style: none;
-  display: inline;
+  display: inline-block;
+  text-align: justify;
   padding-right: 10px;
   margin: 10px;
   position: relative;
@@ -54,6 +55,15 @@ a {
     z-index: -1;
     transform: rotate(-2deg);
   }
+}
+
+#nav { 
+  display: table; 
+  margin: 0 auto;
+}
+
+ul#about li {
+  display: inline;
 }
 
 
