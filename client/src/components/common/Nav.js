@@ -22,15 +22,15 @@ const Nav = () => {
   return (
     <div className="nav-bar">
       <ul className="nav-container">
-        <li className="nav-list"><Link to='/'>Gallery</Link></li>
+        <li className="nav-list"><Link to='/' className="nav-list">Gallery</Link></li>
         {userIsAuthenticated() ?
           <>
-            <li className="nav-list"><Link to='/profile'>Profile</Link></li>
+            <li className="nav-list"><Link to='/profile' className="nav-list">Profile</Link></li>
             <li className="nav-list"><button onClick={handleLogout}>Sign Out</button></li>
           </>
           :
           <>
-            <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
+            <li className="nav-list"><Link to='/signin' className="nav-list">Sign In</Link></li>
           </>
         }
       </ul>

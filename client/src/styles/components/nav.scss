@@ -11,30 +11,30 @@
 }
 
 // List / nav: 
-nav-list {
-  a {
-    color: #141414;
-    text-decoration: none !important;
-    list-style: none;
-    display: inline-block;
-    text-align: justify;
-    padding-right: 10px;
-    margin: 10px;
-    position: relative;
-    ::before {
-      background-color: rgb(217, 241, 245);
+li.nav-list,
+a.nav-list {
+  color: #141414;
+  text-decoration: none !important;
+  list-style: none;
+  display: inline-block;
+  text-align: justify;
+  padding-right: 10px;
+  margin: 5px;
+  position: relative;
+  ::before {
+    background-color: rgb(217, 241, 245);
 
-      content: "";
-      position: absolute;
-      width: calc(100% + 1px);
-      height: 60%;
-      left: -3px;
-      bottom: 0;
-      z-index: -1;
-      transform: rotate(-2deg);
-    }
+    content: "";
+    position: absolute;
+    width: calc(100% + 1px);
+    height: 60%;
+    left: -3px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
   }
 }
+
 
 #nav { 
   display: table; 
@@ -49,4 +49,7 @@ button {
   background: none; 
   color: inherit;
   border: none;
+  font-family: $paragraph-font;
+  cursor: pointer;
+  font-size: 15px
 }
