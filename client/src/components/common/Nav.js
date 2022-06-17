@@ -1,44 +1,43 @@
 import React from 'react'
-import PersonIcon from '@mui/icons-material/Person'
-import Avatar from '@mui/material/Avatar'
-import Box from '@mui/material/Box'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { grey } from '@mui/material/colors'
-// import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-// Material UI Theme
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: grey[400],
-    },
-    secondary: {
-      main: grey[400],
-    },
-  },
-})
+
+// Import helpers
+import { userIsAuthenticated } from '../helpers/auth'
 
 const Nav = () => {
+  console.log(userIsAuthenticated())
+
+  // Navigate
+  const navigate = useNavigate()
+
+  // ? This function removes the token and navigates to the login page
+  const handleLogout = () => {
+    // Remove the token from local storage
+    window.localStorage.removeItem('architecture-waste-age')
+    // Navigate to the gallery page
+    navigate('/')
+  }
+
   return (
     <div className="nav-bar">
-      <div className="nav-container">
-        <ThemeProvider theme={theme}>
-          <Box
-            sx={{
-              marginTop: 2,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'end',
-            }}
-          >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <PersonIcon />
-            </Avatar>
-          </Box>
-        </ThemeProvider>
-      </div>
+      <ul className="nav-container">
+        <li className="nav-list"><Link to='/'>Gallery</Link></li>
+        {userIsAuthenticated() ?
+          <>
+            <li className="nav-list"><Link to='/profile'>Profile</Link></li>
+            <li className="nav-list"><button onClick={handleLogout}>Sign Out</button></li>
+          </>
+          :
+          <>
+            <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
+          </>
+        }
+      </ul>
     </div>
   )
 }
 
 export default Nav
+
+

@@ -5,7 +5,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.exceptions import NotFound
+from rest_framework.exceptions import NotFound, ValidationError
 
 #  custom imports
 from .models import Building 
@@ -33,9 +33,12 @@ class BuildingListView(APIView):
     def post(self, request):
         deserialized_building = BuildingSerializer(data=request.data)
         try:
-            deserialized_building.is_valid()
+            deserialized_building.is_valid(True)
             deserialized_building.save()
             return Response(deserialized_building.data, status.HTTP_201_CREATED)
+        except ValidationError:
+          print(deserialized_building.errors)
+          return Response(deserialized_building.errors, status.HTTP_422_UNPROCESSABLE_ENTITY)          
         except Exception as e:
             print(type(e))
             print(e)

@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
-// #site-container {}
-// #container-wrap {}
+h4,
+h3 {
+  font-family: $sub-heading-font;
+}
 
+h1 {
+  font-family: $title-font;
+}

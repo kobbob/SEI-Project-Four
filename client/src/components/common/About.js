@@ -4,10 +4,11 @@ import { Link, useNavigate } from 'react-router-dom'
 
 
 // Import helpers
-// import { userIsAuthenticated } from '../helpers/auth'
+import { userIsAuthenticated } from '../helpers/auth'
 
 
 const About = () => {
+  console.log(userIsAuthenticated())
 
   // Navigate
   const navigate = useNavigate()
@@ -17,7 +18,7 @@ const About = () => {
     // Remove the token from local storage
     window.localStorage.removeItem('architecture-waste-age')
     // Navigate to the gallery page
-    navigate('/gallery')
+    navigate('/')
   }
 
   return (
@@ -113,21 +114,21 @@ const About = () => {
         </div>
       </section> */}
 
-      <section className="section" id="nav">
+      {/* <section className="section" id="nav">
         <ul className="container" id="about">
           <li className="nav-list"><Link to='/'>Gallery</Link></li>
-          {/* {userIsAuthenticated() ?
-            <> */}
-          <li className="nav-list"><Link to='/profile'>Profile</Link></li>
-          {/* <li className="nav-list"><Link onClick={handleLogout}>Sign Out</Link></li>
+          {userIsAuthenticated() ?
+            <>
+              <li className="nav-list"><Link to='/profile'>Profile</Link></li>
+              <li className="nav-list"><button onClick={handleLogout}>Sign Out</button></li>
             </>
             :
-            <> */}
-          <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
-          {/* </>
-          } */}
+            <>
+              <li className="nav-list"><Link to='/signin'>Sign In</Link></li>
+            </>
+          }
         </ul>
-      </section>
+      </section> */}
 
     </div>
   )

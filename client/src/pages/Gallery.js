@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -37,7 +37,7 @@ const Gallery = () => {
         <span>Loading...</span>
         :
         errors ?
-          <span>Collaborations could not load. Please try again later!</span>
+          <span>Gallery could not load. Please try again later!</span>
           :
           <div className="masonry-container">
             <Box sx={{ width: 800, height: 900, overflowY: 'scroll' }}>
@@ -46,6 +46,7 @@ const Gallery = () => {
                   const { id, image_url, building_name } = building
                   console.log(building)  
                   return (
+                    <Link to={`/${id}`}>
                     <ImageListItem key={id}>
                       <img
                         src={`${image_url}?w=248&fit=crop&auto=format`}
@@ -54,6 +55,7 @@ const Gallery = () => {
                         loading="lazy"
                       />
                     </ImageListItem>
+                    </Link>
                   )
                 })}
               </ImageList>

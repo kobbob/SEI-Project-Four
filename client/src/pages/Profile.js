@@ -11,7 +11,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 import { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 // Import helpers
 import { getTokenFromLocalStorage } from '../components/helpers/auth'
@@ -60,15 +60,12 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      // Third argument of post request is config object
-      // To add our token auth, we add a headers object inside the config object with an Authorization key
-      // Authorization key has a Bearer token as a value, just as in insomnia
-      const { data } = await axios.post('/api/buildings', formData, {
+      const { data } = await axios.post('/api/buildings/', formData, {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },
       })
-      navigate('/gallery')
+      navigate('/')
     } catch (err) {
       console.log(err)
       console.log(err.response.data.errors)
@@ -79,9 +76,9 @@ const Profile = () => {
 
   return (
     <div id="profile-container">
-      <div id="profile-heading">
+      <div className="profile-heading">
         <h1>Profile</h1>
-        <h3>Do you want to add your own entry? Fill out the form below and see the results on the Gallery page.</h3>
+        <h3>Want to add your own entry? Fill out the form below and see the results on the Gallery page.</h3>
       </div>
 
       <div id="form-container">
@@ -231,8 +228,11 @@ const Profile = () => {
                   >
                     Submit
                   </Button>
+
+        
                   
                   <Grid container justifyContent="center">
+                    <Link to='/'>Skip this Step</Link>
                   </Grid>
 
                 </Grid>
