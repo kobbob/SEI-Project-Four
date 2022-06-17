@@ -41,7 +41,7 @@ const Gallery = () => {
           :
           <div className="masonry-container">
             <Box sx={{ width: 800, height: 900, overflowY: 'scroll' }}>
-              <ImageList variant="masonry" cols={4} gap={8}>
+              <ImageList variant="masonry" cols={3} gap={8}>
                 {allBuildings.map(building => {
                   const { id, image_url, building_name } = building
                   console.log(building)  

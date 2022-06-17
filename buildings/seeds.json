@@ -1,0 +1,226 @@
+[
+{
+  "model": "buildings.building",
+  "pk": 3,
+  "fields": {
+    "building_name": "Grand-Parc Housing Estate",
+    "building_location": "Bordeaux",
+    "date_built": 1960,
+    "architect": "Lacaton & Vassal",
+    "description": "\"Underscored by the conviction that architecture is a socially responsive process, the work of French architects Anne Lacaton and Jean-Philippe Vassal explores often radical ideas around use and inhabitation. ‘In French, habiter means the state of being somewhere: space is whatever its use is,’ says Lacaton. ‘All our projects propose generosity of space, freedom of use, and the possibility of appropriation.’\" - By Catherine Slessor (9 August 2019) in Architects Journal",
+    "image_caption": "Image of Grand-Parc House",
+    "image_source": "via Architects Journal",
+    "image_url": "https://cdn.rt.emap.com/wp-content/uploads/sites/4/2019/08/27170130/PHOTOS_GrandParc-1-1-1600x1067.jpg",
+    "source_info": "Architects Journal",
+    "source_url": "https://www.architectsjournal.co.uk/buildings/building-study-lacaton-vassals-renovation-of-a-bordeaux-housing-estate"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 4,
+  "fields": {
+    "building_name": "The Barbican Estate",
+    "building_location": "London",
+    "date_built": 1976,
+    "architect": "Chamberlin, Powell and Bon",
+    "description": "\"Perhaps the most important element of the Barbican’s success is that this is a mixed use scheme, its arts centre and school enlivening the area throughout the day and evening and its range of different homes creating a community that is truly mixed.\" - By Ruth Bloomfield via The Spaces",
+    "image_caption": "Image of The Brutal House",
+    "image_source": "via The Spaces",
+    "image_url": "https://thespaces.com/wp-content/uploads/2015/05/tower-block-and-terrace-block-Barbican-Estate-This-Brutal-House.jpg",
+    "source_info": "The Spaces",
+    "source_url": "https://thespaces.com/brutalist-beauty-the-barbican-estates-value-soars/"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 5,
+  "fields": {
+    "building_name": "Zeitz MOCAA",
+    "building_location": "Cape Town",
+    "date_built": 1920,
+    "architect": "Thomas Heatherwick",
+    "description": "\"Old became new in 2017, with many historic buildings around the world shaking off their former identities and being reconfigured in a variety of creative ways. Here are nine of our favourite adaptive reuse projects that demonstrate the power of architectural reimagination.... In 2017, Thomas Heatherwick saw his plans for a Garden Bridge across the Thames collapse, but it wasn’t all bad. The architect also masterminded the adaptive reuse of a 1920s grain silo on Cape Town’s waterfront, transform",
+    "image_caption": "Image of Zeitz MOCAA",
+    "image_source": "via The Spaces",
+    "image_url": "https://cdn.thespaces.com/wp-content/uploads/2017/12/Zeitz-MOCAA_Heatherwick-Studio-cape-town-7-1050x700.jpg",
+    "source_info": "The Spaces",
+    "source_url": "https://thespaces.com/9-radical-adaptive-reuse-projects-from-2017/"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 6,
+  "fields": {
+    "building_name": "The Department Store",
+    "building_location": "London",
+    "date_built": 1990,
+    "architect": "Squire & Partners",
+    "description": "\"This Edwardian building has had many past lives, including as a department store and a squat den. This year it was reborn as the London headquarters of architectural firm Squire & Partners, who have preserved traces of its past, like graffiti and chipped plaster on the walls, but brought the building into the 21st century by adding a vaulted rooftop restaurant.\" - By Tish Wrigley via The Spaces",
+    "image_caption": "Image of The Department Store",
+    "image_source": "via  Arch Daily",
+    "image_url": "https://images.adsttc.com/media/images/59d6/26c8/b22e/3883/1f00/01a9/slideshow/40_The_Department_Store_Squire_and_Partners_%C2%A9_James_Jones.jpg?1507206836",
+    "source_info": "The Spaces",
+    "source_url": "https://thespaces.com/9-radical-adaptive-reuse-projects-from-2017/"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 7,
+  "fields": {
+    "building_name": "Kanaal",
+    "building_location": "Antwerp",
+    "date_built": 1857,
+    "architect": "Axel Vervoordt",
+    "description": "\"This year Axel Vervoordt unveiled Kanaal, his cultural and residential complex set in an old malting distillery outside Antwerp. Created in collaboration with architectural practices Bogdan & Van Broeck, Coussée & Goris and Stéphane Beel, it features apartments, galleries, offices, a bakery, a restaurant and an auditorium. ‘It’s a place where art, architecture and nature become one,’ Vervoordt told us.\" - By Tish Wrigley via The Spaces",
+    "image_caption": "Image of Kanaal",
+    "image_source": "via The Spaces",
+    "image_url": "https://cdn.thespaces.com/wp-content/uploads/2017/12/Axel-Vervoordt-Kanaal-in-Antwerp-7_kanaal-1jan-ligeois-1560x877.jpg",
+    "source_info": "The Spaces",
+    "source_url": "https://thespaces.com/9-radical-adaptive-reuse-projects-from-2017/"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 8,
+  "fields": {
+    "building_name": "Alila Yangshuo Hotel",
+    "building_location": "Guangxi",
+    "date_built": 1960,
+    "architect": "Vector Architects",
+    "description": "\"Beijing-based Vector Architects took on this ambitious adaptive reuse project, turning a 1960s sugar mill complex into new resort, Alila Yangshuo Hotel. They transformed the cluster of industrial buildings and old sugar cane truss using perforated concrete and latticed wood, creating a striking blend of old and new, all centred round a reflecting pond and elevated swimming pool.\" - By Tish Wrigley via The Spaces",
+    "image_caption": "Image of Alila Yangshuo Hotel",
+    "image_source": "via The Spaces",
+    "image_url": "https://cdn.thespaces.com/wp-content/uploads/2017/12/Adaptive-reuse-projects-alila-yangshuo-vector-architects-gong-dong-resort-hotel-china-2.jpg",
+    "source_info": "The Spaces",
+    "source_url": "https://thespaces.com/9-radical-adaptive-reuse-projects-from-2017/"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 9,
+  "fields": {
+    "building_name": "Elbphilharmonie",
+    "building_location": "Hamburg",
+    "date_built": 1963,
+    "architect": "Herzog & de Meuron",
+    "description": "\"Herzog & de Meuron’s ambitious Hamburg concert hall complex took 16 years to complete, but finally hosted its first concert in January 2017. With a red brick waterfront cocoa factory as its base, the old building is crowned with a gleaming silver construction made from 2,200 glass panels. The building’s status was confirmed this week, when Karl Lagerfeld transformed it into the setting for Chanel’s Metiers d’Art show.\"  - By Tish Wrigley via The Spaces",
+    "image_caption": "Image of Elbphilharmonie",
+    "image_source": "via The Spaces",
+    "image_url": "https://cdn.thespaces.com/wp-content/uploads/2017/12/adaptive-reuse-project-elbphilharmonie-concert-hall-hamburg-architecture.jpg",
+    "source_info": "The Spaces",
+    "source_url": "https://thespaces.com/9-radical-adaptive-reuse-projects-from-2017/"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 10,
+  "fields": {
+    "building_name": "The Ned",
+    "building_location": "London",
+    "date_built": 1924,
+    "architect": "Edward Lutyens",
+    "description": "\"In a year of hotly anticipated openings, none achieved as much buzz as The Ned, Soho House’s first foray into London’s City district. The project involved the adaptive reuse of the former Midland Bank headquarters, built in 1924 by architect Edward Lutyens. It is now a hotel, club and dining venue named in Lutyens’ honour. New visitors should descend to the Vaults, where, hidden behind a 20-tonne door with 3,800 deposit boxes lining the walls, is a 1920s-style cocktail bar.\"  - By Tish Wrigley",
+    "image_caption": "Image of The Ned",
+    "image_source": "via The Spaces",
+    "image_url": "https://cdn.thespaces.com/wp-content/uploads/2017/12/the_ned-london.jpg",
+    "source_info": "The Spaces",
+    "source_url": "https://thespaces.com/9-radical-adaptive-reuse-projects-from-2017/"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 11,
+  "fields": {
+    "building_name": "Pirelli Tire Building",
+    "building_location": "Connecticut",
+    "date_built": 1969,
+    "architect": "Becker + Becker",
+    "description": "\"Not only can Brutalist buildings be given a new use, but they can be retrofitted to operate with green energy. Marcel Breuer's Pirelli Tire Building in New Haven, built in 1969, is currently being transformed into a net-zero energy hotel by Becker + Becker Associates. The structure housed offices, as well as a research and development facility, and after it was vacated in 1999, it entered a state of decline. The concrete landmark will contain 165 rooms and will operate with energy prod. on site",
+    "image_caption": "Image of Prielli Tire Building",
+    "image_source": "Via Archdaily",
+    "image_url": "https://images.adsttc.com/media/images/6122/b246/5a3e/0801/642a/89b6/newsletter/pirelli-tire-building-new-haven.jpg?1629663860",
+    "source_info": "Archdaily",
+    "source_url": "https://www.archdaily.com/967215/the-refurbishment-and-adaptive-reuse-of-brutalist-architecture"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 12,
+  "fields": {
+    "building_name": "Boston City Hall",
+    "building_location": "Boston",
+    "date_built": 1960,
+    "architect": "Various Developers",
+    "description": "In 2015, the City of Boston launched a \"Rethink City Hall\" program to gather ideas for changes to the building and to City Hall Plaza.[54][55] The Getty Foundation awarded Boston a grant of in 2017 to study ways to preserve and enhance City Hall and its plaza. The Foundation noted “a shift in public sentiment” in recent years, “with many residents now embracing the site as a key feature of the city fabric.”  - via Wikipedia",
+    "image_caption": "Image of Boston City Hall",
+    "image_source": "Via Archdaily",
+    "image_url": "https://images.adsttc.com/media/images/6122/b0fa/5a3e/0801/642a/89b3/newsletter/boston-city-hall-image-courtesy-of-utile-and-reed-hilderbrand.jpg?1629663489",
+    "source_info": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Boston_City_Hall"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 13,
+  "fields": {
+    "building_name": "Brutalist House in Brazil",
+    "building_location": "Brazil",
+    "date_built": 2019,
+    "architect": "Arquitécnika",
+    "description": "Date stated of renovation",
+    "image_caption": "Renovation of Brutalist House in Brazil",
+    "image_source": "Via Archdaily",
+    "image_url": "https://images.adsttc.com/media/images/5ee9/8c78/b357/6578/8b00/00d3/slideshow/_MG_0123.jpg?1592364130",
+    "source_info": "Archdaily",
+    "source_url": "https://www.archdaily.com/941860/renovation-of-a-brutalist-house-in-brazil-arquitecnika"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 14,
+  "fields": {
+    "building_name": "Jaegersborg Water Tower",
+    "building_location": "Copenhagen",
+    "date_built": 1955,
+    "architect": "Dorte Mandrup Arkitekter ApS",
+    "description": "\"In 2004, Dorte Mandrup Arkitekter ApS won the competition to convert the Jaegersborg Water Tower into a mixed-use building. Now, the building is occupied by student housing on the upper floors, with a protruding crystalline structure added to each unit, offering added daylight and views of the city.\"",
+    "image_caption": "Image",
+    "image_source": "Via Archdaily",
+    "image_url": "https://images.adsttc.com/media/images/56dc/6488/e58e/cec3/ec00/0062/newsletter/stringio.jpg?1457284227",
+    "source_info": "Archdaily",
+    "source_url": "https://www.archdaily.com/783283/20-creative-adaptive-reuse-projects"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 15,
+  "fields": {
+    "building_name": "Professional Cooking School in Ancient Slaughterhouse",
+    "building_location": "Cadiz, Spain",
+    "date_built": 1800,
+    "architect": "Sol89",
+    "description": "\"From a 19th century slaughterhouse, Sol89 created a professional cooking school by consolidating the old building under a new ceramic roof and utilizing various other materials that recall the building’s origins.\"",
+    "image_caption": "Image",
+    "image_source": "Via Archdaily",
+    "image_url": "https://images.adsttc.com/media/images/56dc/67aa/e58e/cec3/ec00/006c/newsletter/03.jpg?1457285029",
+    "source_info": "Archdaily",
+    "source_url": "https://www.archdaily.com/783283/20-creative-adaptive-reuse-projects"
+  }
+},
+{
+  "model": "buildings.building",
+  "pk": 16,
+  "fields": {
+    "building_name": "Refurbishment of the Old Benalua Station and Insertion of Casa Mediterraneo Headquarters",
+    "building_location": "Alicante, Spain",
+    "date_built": 2012,
+    "architect": "Manuel Ocana Architecture",
+    "description": "Data shown of renovation. \"Set within the old Benalua Railway Station, the Casa Mediterraneo Headquarters utilized a low budget to create a multifunctional space for events, including exhibitions, concerts, and parties.\"",
+    "image_caption": "Image",
+    "image_source": "Via Archdaily",
+    "image_url": "https://images.adsttc.com/media/images/56dc/67dd/e58e/cec3/ec00/006d/newsletter/01513_027DFR.jpg?1457285080",
+    "source_info": "Archdaily",
+    "source_url": "https://www.archdaily.com/783283/20-creative-adaptive-reuse-projects"
+  }
+}
+]

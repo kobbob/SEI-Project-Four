@@ -8,6 +8,7 @@
   overflow-x: hidden;
   width: 500px;
   border-right: black 2px solid;
+  box-shadow: 5px 0 5px -1px rgb(183, 183, 183);
 }
 
 // Typography: 
@@ -16,7 +17,7 @@ h1.title {
 }
 
 h1.title {
-  margin-top: 8vh;
+  margin-top: 80vh;
   margin-bottom: 3vh;
   font-size: 300%;
 }
@@ -30,6 +31,10 @@ span {
 span {
   font-size: 10px;
   ;
+}
+
+p.sources{
+  font-size: x-small;
 }
 
 // List / nav: 
@@ -96,12 +101,13 @@ section {
 
 #hero {
   height: 250px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background-image:
     url('/assets/hero-image.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
-  border: 1px solid black
+  border: 1px solid black;
+  margin-top: 60px;
 }
 
 #gallery {
@@ -123,15 +129,15 @@ section {
     }
 
     &.image-one {
-      background-image: url('/assets/image-one.jpg');
+      background-image: url('/assets/image-one.png');
     }
 
     &.image-two {
-      background-image: url('/assets/image-two.jpg');
+      background-image: url('/assets/image-two.png');
     }
 
     &.image-three {
-      background-image: url('/assets/image-three.jpg');
+      background-image: url('/assets/image-three.png');
     }
   }
 }

@@ -10,7 +10,6 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { green, purple } from '@mui/material/colors'
 
 import { useState } from 'react'
 import axios from 'axios'
@@ -20,10 +19,10 @@ import { useNavigate } from 'react-router-dom'
 const theme = createTheme({
   palette: {
     primary: {
-      main: purple[500],
+      main: '#757ce8',
     },
     secondary: {
-      main: green[500],
+      main: '#3f50b5',
     },
   },
 })
