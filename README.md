@@ -110,28 +110,28 @@ __Authentication:__
 
 The authenticate method overrides the default authentication that is executed when we access any secure route. We use this to customise the authentication. Here I used imported permissions ‘IsAuthenticatedOrReadOnly’ when submitting a new building entry and retrieving all buildings displayed on the database. 
 
-    ```javascript
-    from rest_framework.permissions import IsAuthenticatedOrReadOnly
+```javascript
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-    # Create your views here.
-    class BuildingListView(APIView):
-       permissions_classes = (IsAuthenticatedOrReadOnly, )
+# Create your views here.
+class BuildingListView(APIView):
+   permissions_classes = (IsAuthenticatedOrReadOnly, )
 
-       # POST - Add a new building to the database
-       def post(self, request):
-           deserialized_building = BuildingSerializer(data=request.data)
-           try:
-               deserialized_building.is_valid(True)
-               deserialized_building.save()
-               return Response(deserialized_building.data, status.HTTP_201_CREATED)
-           except ValidationError:
-             print(deserialized_building.errors)
-             return Response(deserialized_building.errors, status.HTTP_422_UNPROCESSABLE_ENTITY)         
-           except Exception as e:
-               print(type(e))
-               print(e)
-               return Response({ 'detail': str(e) }, status.HTTP_422_UNPROCESSABLE_ENTITY)
-      ```         
+   # POST - Add a new building to the database
+   def post(self, request):
+       deserialized_building = BuildingSerializer(data=request.data)
+       try:
+           deserialized_building.is_valid(True)
+           deserialized_building.save()
+           return Response(deserialized_building.data, status.HTTP_201_CREATED)
+       except ValidationError:
+         print(deserialized_building.errors)
+         return Response(deserialized_building.errors, status.HTTP_422_UNPROCESSABLE_ENTITY)         
+       except Exception as e:
+           print(type(e))
+           print(e)
+           return Response({ 'detail': str(e) }, status.HTTP_422_UNPROCESSABLE_ENTITY)
+  ```         
  
  Here, to get the request body we use the data key on the request object. We then pass python into a serializer to convert the data into a QuerySet (deserialization). The serializer gives us the methods to check the validity of the data being passed through the form into the database. It checks our model, and ensures it passes our instructed validation. If it fails the validation, it throws us an error. If not, the data has been saved and a data key is assigned to the Building instance that contains a python copy of the data that has just been created. 
 
