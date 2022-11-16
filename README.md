@@ -11,6 +11,9 @@ The user would be able to navigate around the world and learn more about these p
 
 Unfortunately, I was unable to fulfil this feature and end-product within the timeframe, and had to recalibrate my project’s design and features mid-way through the week. 
 
+🖥 Jump to the [Demo](#demo) section to see the app in action!
+
+
 ## Navigation
 
 * [The App](#the-app)
