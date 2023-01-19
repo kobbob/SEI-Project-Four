@@ -14,8 +14,7 @@ Unfortunately, I was unable to fulfil this feature and end-product within the ti
 🖥 Jump to the [Demo](#demo) section to see the app in action!
 
 ## Improvements
-* [Future Improvements](#future-improvements)
-Improvements to the app and deployment to follow within the next two weeks (written 19.01.2023)
+* [Future Improvements](#future-improvements) to the app and deployment to follow within the next two weeks (written 19.01.2023)
 
 ## Navigation
 
