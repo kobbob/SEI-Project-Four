@@ -13,12 +13,14 @@ Unfortunately, I was unable to fulfil this feature and end-product within the ti
 
 🖥 Jump to the [Demo](#demo) section to see the app in action!
 
+✨✨✨✨✨✨✨✨✨
 ## Improvements
-* [Future Improvements](#future-improvements) to the app and deployment to follow within the next two weeks (written 19.01.2023)
+* Check out the [Future Improvements](#future-improvements) to the app and deployment to follow within the next two weeks (written 19.01.2023)
 
 ## Navigation
 
 * [The App](#the-app)
+* [Demo](#demo)
 * [The Brief](#the-brief)
 * [Technologies Used](#technologies-used)
 * [General Approach](#general-approach)
@@ -27,12 +29,11 @@ Unfortunately, I was unable to fulfil this feature and end-product within the ti
 * [Build Approach](#build-approach)
   * [Frontend Interface](#frontend-interface)
   * [Backend](#backend)
-* [Demo](#demo)
 * [Challenges](#challenges)
 * [Wins](#wins)
 * [Key Learnings](#key-learnings)
 * [Future Improvements](#future-improvements)
-* [Credits](#credits)
+
 
 ## The App
 
@@ -40,7 +41,10 @@ Unfortunately, I was unable to fulfil this feature and end-product within the ti
 <img src="client/src/assets/P4-main.png" width=650>
 <img src="client/src/assets/P4-main-info.png" width=650>
 
-[Demo](#demo)
+
+## Demo
+
+https://user-images.githubusercontent.com/103049670/183925359-9e233ac2-69c0-4a15-a4d8-9e25b02f13b0.mp4
 
 ## The Brief
 * Build a full-stack application using a Python Django API and Django REST Framework to serve the data from a Postgres database. 
@@ -140,10 +144,6 @@ class BuildingListView(APIView):
  
  Here, to get the request body we use the data key on the request object. We then pass python into a serializer to convert the data into a QuerySet (deserialization). The serializer gives us the methods to check the validity of the data being passed through the form into the database. It checks our model, and ensures it passes our instructed validation. If it fails the validation, it throws us an error. If not, the data has been saved and a data key is assigned to the Building instance that contains a python copy of the data that has just been created. 
 
-## Demo
-
-https://user-images.githubusercontent.com/103049670/183925359-9e233ac2-69c0-4a15-a4d8-9e25b02f13b0.mp4
-
 
 ## Challenges
 * With only a week spent learning Python and Django, I felt there was still a lot to grasp and understand before going into a solo project. Albeit daunting, I still managed to achieve an app that connects the front and back-end together as desired. 
@@ -160,6 +160,7 @@ https://user-images.githubusercontent.com/103049670/183925359-9e233ac2-69c0-4a15
 
 
 ## Future Improvements
-* I intend to develop this app as originally designed with the 3D interactive globe. With discussions on stackOverflow and gitHub I hope to interact with fellow programmers in trying to achieve this. 
+* I intend to develop this app as originally designed with the 3D interactive globe. With discussions on stackOverflow and gitHub I hope to interact with fellow programmers in trying to achieve this. Similar frontend to example: https://www.fonterra.com/nz/en/campaign/fonterra-globe.html#/home 
+* Tidy up login and profile pages. 
 
 
